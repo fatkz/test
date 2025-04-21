@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Test</title>
+    <script>
+        window.onload = function() {
+            // Sayfa yüklendiğinde otomatik olarak istek gönderilecek
+            fetch('https://t2w2m7bdg3yyxn9air2ovvjqxh38rzfo.oastify.com', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.text())
+            .then(data => console.log('Response:', data))
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+    <h1>Request is being sent...</h1>
+</body>
+</html>
